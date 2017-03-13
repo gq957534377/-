@@ -742,15 +742,15 @@
 
     $.fn.ssi_uploader = function (opts) {
         var defaults = {
-            url: '',
-            data: {},
-            locale: 'ch',
+            url: '',//上传地址
+            data: {},//上传的数据
+            locale: 'ch',//提示语言，这里我已经自己手动设置了中文语言包，有其他需要的可以在文件末尾自行添加
             preview: true,
             dropZone: true,
-            maxNumberOfFiles: '',
+            maxNumberOfFiles: '',//最大上传数量
             responseValidation: false,
-            maxFileSize: 2,
-            ajaxOptions: {},
+            maxFileSize: 2,//文件最大上传内存，单位M
+            ajaxOptions: {},//ajax参数
             onUpload: function () {
             },
             onEachUpload: function () {
@@ -759,7 +759,7 @@
             },
             beforeEachUpload: function () {
             },
-            allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif'],
+            allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif'],//上传文件格式
             errorHandler: {
                 method: function (msg) {
                     alert(msg);
